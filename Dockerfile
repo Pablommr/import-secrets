@@ -2,13 +2,13 @@
 FROM alpine:3.20.3
 
 # Definindo o diretório de trabalho
-WORKDIR /app
+WORKDIR /
 
 # Copiando o script entrypoint.sh para o contêiner
-COPY entrypoint.sh /app/entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
 
 # Dando permissão de execução ao script
-RUN chmod +x /app/entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 # Definindo o script como entrypoint
-ENTRYPOINT ["/app/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
