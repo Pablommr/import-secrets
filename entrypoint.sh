@@ -18,8 +18,8 @@ ARRAY_KEYS="$(echo -n $ALL_SECRETS | jq -cr 'to_entries')"
 
 #Percorre todos os elementos do JSON $ALL_SECRETS
 for (( i=0; i < $(echo $ARRAY_KEYS | jq -cr 'length'); ++i )) do
-  key="$(echo -n $ARRAY_KEYS | jq \".[$i].key\")"
-  value="$(echo -n $ARRAY_KEYS | jq \".[$i].value\")"
+  key="$(echo -n $ARRAY_KEYS | jq -cr ".[$i].key")"
+  value="$(echo -n $ARRAY_KEYS | jq -cr ".[$i].value")"
 
   echo "Exporting env: $key"
   echo "$key=$value" >> $GITHUB_ENV
