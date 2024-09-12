@@ -1,6 +1,9 @@
 # Usando imagem base alpine
 FROM alpine:3.20.3
 
+# Instala o dependências
+RUN apk add --no-cache jq
+
 # Definindo o diretório de trabalho
 WORKDIR /
 
