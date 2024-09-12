@@ -1,0 +1,10 @@
+
+name: import-secrets
+description: "Action to import Environment secrets and import as environment inside actions"
+author: 'Pablo M Marques'
+branding:
+  icon: 'key'  
+  color: 'black'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
