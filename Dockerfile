@@ -2,7 +2,7 @@
 FROM alpine:3.20.3
 
 # Instala o dependências
-RUN apk add --no-cache jq
+RUN apk add --no-cache jq bash
 
 # Definindo o diretório de trabalho
 WORKDIR /
