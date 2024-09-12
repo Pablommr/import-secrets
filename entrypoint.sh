@@ -25,4 +25,5 @@ for (( i=0; i < $(echo $ARRAY_KEYS | jq -cr 'length'); ++i )) do
   echo "$key=$value" >> $GITHUB_ENV
 done
 
+echo ""
 echo "Done =D"
