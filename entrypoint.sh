@@ -22,7 +22,7 @@ for (( i=0; i < $(echo $ARRAY_KEYS | jq -cr 'length'); ++i )) do
   value="$(echo -n $ARRAY_KEYS | jq ".[$i].value")"
 
   echo "Exporting env: $key"
-  eval export $key="$value"
+  echo "$key=$value" >> $GITHUB_ENV
 done
 
 echo "Done =D"
