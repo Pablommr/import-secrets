@@ -15,9 +15,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - name: Import secrets
-        environment: production
         uses: Pablommr/import-secrets@v1.0.0
         env:
           ALL_SECRETS: ${{ toJson(secrets) }}
