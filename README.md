@@ -18,7 +18,7 @@ jobs:
     environment: production
     steps:
       - name: Import secrets
-        uses: Pablommr/import-secrets@v1.0.0
+        uses: Pablommr/import-secrets@v1.0.1
         env:
           ALL_SECRETS: ${{ toJson(secrets) }}
 ```
